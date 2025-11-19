@@ -4,9 +4,11 @@ services:
     build: .
     container_name: node1
     ports:
-      - "2222:22"
+      - "2222:22" # SSH
+      - "8081:80" # NGINX
   node2:
     build: .
     container_name: node2
     ports:
-      - "2223:22"
+      - "2223:22" # SSH
+      - "8082:80" # NGINX
